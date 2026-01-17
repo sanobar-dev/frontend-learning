@@ -1,1 +1,28 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JSON Mini Project — Users</title>
+  <link rel="stylesheet" href="./json-project.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>JSON Mini Project</h1>
+      <p class="subtitle">Загружаю пользователей из JSON и показываю карточки + поиск.</p>
+    </header>
 
+    <section class="panel">
+      <input id="search" class="search" type="text" placeholder="Поиск по имени или email..." />
+      <div id="meta" class="meta"></div>
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section id="list" class="grid"></section>
+  </main>
+
+  <script src="./json-project.js"></script>
+</body>
+</html>
