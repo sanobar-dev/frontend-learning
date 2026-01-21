@@ -1,15 +1,23 @@
-# Frontend Learning (Portfolio)
+# Sanobar — Junior Front-end Developer
 
-Live: https://sanobar-dev.github.io/frontend-learning/  
-Code: https://github.com/sanobar-dev/frontend-learning
+Hi! I’m Sanobar, a junior front-end developer. I create simple websites using HTML and CSS, and I’m currently learning JavaScript.
 
-## About
-My first steps in frontend development. HTML/CSS projects + JSON mini project (in progress).
+## Live Portfolio
+- 🇷🇺 Russian version: https://sanobar-dev.github.io/frontend-learning/
+- 🇬🇧 English version: https://sanobar-dev.github.io/frontend-learning/en.html
 
-## Tech
-- HTML
-- CSS
+## Skills
+- HTML (semantic structure)
+- CSS (styling, Flexbox, basic responsiveness)
+- JavaScript (basics — in progress)
+- GitHub (publishing projects)
 
 ## Projects
-- My first website (HTML/CSS)
-- JSON Mini Project (in progress)
+- Learning Portfolio (HTML, CSS)
+- Profile Card with Image
+- Simple Landing Page
+- JavaScript mini-project (in progress)
+
+## Contacts
+- Telegram: https://t.me/sanobar19821979
+- GitHub: https://github.com/sanobar-dev
