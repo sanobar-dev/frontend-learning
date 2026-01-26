@@ -1,98 +1,145 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanobar — Junior Frontend Developer</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
 
-<body>
-  <header class="header">
-    <div class="container header__inner">
-      <span class="brand">Sanobar</span>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: linear-gradient(180deg, #f6f7fb 0%, #eef2ff 100%);
+}
 
-      <nav class="nav">
-        <a href="#about">Обо мне</a>
-        <a href="#projects">Проекты</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-    </div>
-  </header>
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-  <main class="main">
-    <div class="container layout">
+/* ===== Layout ===== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
 
-      <!-- Фото из интернета -->
-      <aside class="card photo">
-  <img
-  class="photo__img"
-  src="my.jpg/image.jpg"
-  alt="Фото Санобар"
-/>
-  <h1 class="title">Sanobar</h1>
-  <p class="subtitle">Junior Frontend Developer</p>
-</aside>
-      <section class="stack">
+.layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 16px;
+  align-items: start;
+}
 
-        <section id="about" class="card">
-          <h2>Обо мне</h2>
-          <p>
-            Привет! Меня зовут Санобар. Я начинающий frontend-разработчик.
-            Изучаю HTML, CSS и JavaScript и собираю своё портфолио.
-          </p>
+/* ===== Header ===== */
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
 
-          <h3>Навыки</h3>
-          <ul>
-            <li>HTML — семантическая разметка</li>
-            <li>CSS — стилизация, Flexbox, адаптив</li>
-            <li>JavaScript — основы</li>
-            <li>GitHub — публикация проектов</li>
-          </ul>
-        </section>
+.nav {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
 
-        <section id="projects" class="card">
-          <h2>Проекты</h2>
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
 
-          <article class="project">
-            <h3>Мой первый сайт</h3>
-            <p>Первая практика верстки и структуры страницы.</p>
-            <a class="link" href="https://sanobar-dev.github.io/frontend-learning/" target="_blank">
-              Открыть сайт
-            </a>
-          </article>
+/* ===== Cards ===== */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
 
-          <article class="project">
-            <h3>Мини-проект на JavaScript</h3>
-            <p>Работа с DOM и событиями (в процессе).</p>
-            <span class="badge">In progress</span>
-          </article>
-        </section>
+/* ===== Photo block ===== */
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-        <section id="contacts" class="card">
-          <h2>Контакты</h2>
-          <p>
-            Telegram:
-            <a class="link" href="https://t.me/sanobar19821979" target="_blank">
-              @sanobar19821979
-            </a>
-          </p>
-          <p>
-            GitHub:
-            <a class="link" href="https://github.com/sanobar-dev" target="_blank">
-              github.com/sanobar-dev
-            </a>
-          </p>
-        </section>
+.photo__img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
 
-      </section>
-    </div>
-  </main>
+.title {
+  margin: 0;
+  font-size: 22px;
+}
 
-  <footer class="footer">
-    <div class="container">
-      <small>© 2026 Sanobar. Made with HTML & CSS.</small>
-    </div>
-  </footer>
-</body>
-</html>        
+.subtitle {
+  margin: 4px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+/* ===== Text ===== */
+h2 {
+  margin-top: 0;
+}
+
+.link {
+  color: #1a73e8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 24px;
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.footer small {
+  display: block;
+  text-align: center;
+  color: #666;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+
+  .card {
+    padding: 14px;
+  }
+
+  .photo__img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+}
