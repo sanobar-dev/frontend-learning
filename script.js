@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanobar — Junior Frontend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <span class="brand">Sanobar</span>
+
+      <nav class="nav">
+        <a href="#about">Обо мне</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container layout">
+
+      <!-- Фото из интернета -->
+      <aside class="card photo">
+  <img
+  class="photo__img"
+  src="my.jpg/photo_2026-01-25_15-38-22.jpg"
+  alt="Фото Санобар"
+/>
+  <h1 class="title">Sanobar</h1>
+  <p class="subtitle">Junior Frontend Developer</p>
+</aside>
+      <section class="stack">
+
+        <section id="about" class="card">
+          <h2>Обо мне</h2>
+          <p>
+            Привет! Меня зовут Санобар. Я начинающий frontend-разработчик.
+            Изучаю HTML, CSS и JavaScript и собираю своё портфолио.
+          </p>
+
+          <h3>Навыки</h3>
+          <ul>
+            <li>HTML — семантическая разметка</li>
+            <li>CSS — стилизация, Flexbox, адаптив</li>
+            <li>JavaScript — основы</li>
+            <li>GitHub — публикация проектов</li>
+          </ul>
+        </section>
+
+        <section id="projects" class="card">
+          <h2>Проекты</h2>
+
+          <article class="project">
+            <h3>Мой первый сайт</h3>
+            <p>Первая практика верстки и структуры страницы.</p>
+            <a class="link" href="https://sanobar-dev.github.io/frontend-learning/" target="_blank">
+              Открыть сайт
+            </a>
+          </article>
+
+          <article class="project">
+            <h3>Мини-проект на JavaScript</h3>
+            <p>Работа с DOM и событиями (в процессе).</p>
+            <span class="badge">In progress</span>
+          </article>
+        </section>
+
+        <section id="contacts" class="card">
+          <h2>Контакты</h2>
+          <p>
+            Telegram:
+            <a class="link" href="https://t.me/sanobar19821979" target="_blank">
+              @sanobar19821979
+            </a>
+          </p>
+          <p>
+            GitHub:
+            <a class="link" href="https://github.com/sanobar-dev" target="_blank">
+              github.com/sanobar-dev
+            </a>
+          </p>
+        </section>
+
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>© 2026 Sanobar. Made with HTML & CSS.</small>
+    </div>
+  </footer>
+</body>
+</html>        
