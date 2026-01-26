@@ -2,175 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sanobar — Junior Frontend Developer</title>
   <link rel="stylesheet" href="style.css">
-  <title>My First HTML Page</title>
 </head>
 
 <body>
-<header class="header">
-  <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contacts">Contacts</a>
-  </nav>
-</header>
-
-<main class="container">
-
-  <div class="lang">
-    <a href="index.html">RU version</a>
-  </div>
-
-  <h1>This is my first website 🚀</h1>
-
-  <img src="my.jpg/image.jpg" class="profile-img" alt="My photo">
-
-  <div class="about" id="about">
-    <h2>About Me</h2>
-
-    <p>
-      I am a Junior Front-end Developer.
-      I create simple websites using HTML and CSS.
-      I am learning JavaScript and gradually adding interactivity.
-      I am interested in web development and want to grow professionally.
-    </p>
-
-    <p>
-      Currently, I am building my portfolio and looking for my first job or internship.
-    </p>
-  </div>
-
-  <h2>My Skills</h2>
-  <ul>
-    <li>HTML — semantic markup</li>
-    <li>CSS — styling, Flexbox, basic responsiveness</li>
-    <li>JavaScript — basics (currently learning)</li>
-    <li>GitHub — project publishing</li>
-  </ul>
-
-  <section class="contacts" id="contacts">
-    <h2>Contacts</h2>
-
-    <p>
-      Telegram:
-      <a href="https://t.me/sanobar19821979" target="_blank">
-        @sanobar19821979
-      </a>
-    </p>
-
-    <p>
-      GitHub:
-      <a href="https://github.com/sanobar-dev" target="_blank">
-        github.com/sanobar-dev
-      </a>
-    </p>
-  </section>
-
-  <section class="projects" id="projects">
-    <h2>My Projects</h2>
-
-    <ul>
-      <li>Learning portfolio (HTML, CSS)</li>
-      <li>Profile card with image</li>
-      <li>Simple landing page</li>
-    </ul>
-
-    <h3>My First Website</h3>
-    <p>
-      First project built with HTML and CSS.
-      Semantic structure, responsiveness, buttons, and hover effects.
-    </p>
-
-    <div class="tech-stack">
-      <span>HTML</span>
-      <span>CSS</span>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contacts">Contacts</a>
+        <a href="index.html">RU</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="project-links">
-      <a class="project-link disabled" href="#" aria-disabled="true">Code</a>
-      <a class="project-link disabled" href="#" aria-disabled="true">Live</a>
-      <span class="project-status">In progress</span>
+  <!-- Main -->
+  <main class="main">
+    <div class="container layout">
+
+      <!-- Photo card -->
+      <aside class="card photo">
+        <img class="photo__img" src="my.jpg/photo_2026-01-25_15-38-22.jpg"
+        alt="Фото Санобар"
+       />
+        <h1 class="title">Sanobar</h1>
+        <p class="subtitle">Junior Frontend Developer</p>
+      </aside>
+
+      <!-- Content -->
+      <section class="stack">
+
+        <!-- About -->
+        <section id="about" class="card">
+          <h2>About Me</h2>
+          <p>
+            Hi! My name is Sanobar. I am a beginner Frontend Developer.
+            I am learning HTML, CSS, and JavaScript and building my portfolio step by step.
+          </p>
+
+          <h3>Skills</h3>
+          <ul>
+            <li>HTML — semantic markup</li>
+            <li>CSS — styling, Flexbox, responsive layout</li>
+            <li>JavaScript — basics</li>
+            <li>GitHub — project publishing</li>
+          </ul>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="card">
+          <h2>Projects</h2>
+
+          <p>
+            <strong>My first website</strong><br>
+            First practice with page structure and layout.<br>
+            <a class="link" href="https://sanobar-dev.github.io/frontend-learning/" target="_blank">
+              Open website
+            </a>
+          </p>
+        </section>
+
+        <!-- Contacts -->
+        <section id="contacts" class="card">
+          <h2>Contacts</h2>
+
+          <p>
+            Telegram:
+            <a class="link" href="https://t.me/sanobar19821979" target="_blank">
+              @sanobar19821979
+            </a>
+          </p>
+
+          <p>
+            GitHub:
+            <a class="link" href="https://github.com/sanobar-dev" target="_blank">
+              github.com/sanobar-dev
+            </a>
+          </p>
+        </section>
+
+      </section>
     </div>
+  </main>
 
-    <div class="project-card">
-      <h3>Learning Landing Page</h3>
-      <p>
-        A landing page with sections, buttons, and responsive layout.
-        Layout and UI practice.
-      </p>
-
-      <div class="tech-stack">
-        <span>HTML</span>
-        <span>CSS</span>
-      </div>
-
-      <div class="project-links">
-        <a href="#" class="project-link">Code</a>
-        <a href="#" class="project-link">Live</a>
-      </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <small>© 2026 Sanobar. Made with HTML & CSS.</small>
     </div>
-
-    <!-- Project 3 -->
-    <div class="project-card">
-      <h3>JavaScript Mini Project</h3>
-      <p>
-        A small JavaScript project (in progress).
-      </p>
-
-      <div class="tech-stack">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-      </div>
-
-      <div class="project-links">
-        <a class="project-link github"
-           href="https://github.com/sanobar-dev/frontend-learning"
-           target="_blank" rel="noopener">
-           Code
-        </a>
-
-        <a class="project-link live"
-           href="./json-project.html"
-           target="_blank" rel="noopener">
-           Live
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <h3>My First Website</h3>
-      <p>
-        First HTML and CSS project.
-        Includes image, buttons, hover effects, and responsive layout.
-      </p>
-
-      <a class="project-link"
-         href="https://github.com/sanobar-dev/frontend-learning"
-         target="_blank" rel="noopener">
-        Code (GitHub)
-      </a>
-
-      <a class="project-link"
-         href="https://sanobar-dev.github.io/frontend-learning/"
-         target="_blank" rel="noopener">
-        Live Site
-      </a>
-      <h2>My Portfolio</h2>
-      <ul>
-        <li>My first HTML website</li>
-        <li>A page with a Telegram button</li>
-        <li>Learning projects (in progress 🚀)</li>
-      </ul>
-    </div>
-
-  </section>
-
-</main>
-
-<footer class="footer">
-  <p>© 2026 Sanobar. Made with HTML & CSS.</p>
-</footer>
-
+  </footer>
 </body>
 </html>
