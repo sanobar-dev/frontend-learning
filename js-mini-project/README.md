@@ -1,4 +1,4 @@
-# JavaScript Mini Project — To-Do List ✅
+# JavaScript Mini Project — To-Do List 
 
 A simple To-Do app built with vanilla JavaScript.
 
@@ -19,5 +19,5 @@ A simple To-Do app built with vanilla JavaScript.
 - JavaScript (DOM, Events, localStorage)
 
 ## Author
-Sanobar-Junior Frontend 
+Sanobar-Junior Front-end 
 Developer
