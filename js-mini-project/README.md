@@ -19,4 +19,5 @@ A simple To-Do app built with vanilla JavaScript.
 - JavaScript (DOM, Events, localStorage)
 
 ## Author
-Sanobar
+Sanobar-Junior Frontend 
+Developer
