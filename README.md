@@ -7,16 +7,17 @@ Hi! I’m Sanobar, a junior front-end developer. I create simple websites using 
 - 🇬🇧 English version: https://sanobar-dev.github.io/frontend-learning/en.html
 
 ## Skills
-- HTML (semantic structure)
-- CSS (styling, Flexbox, basic responsiveness)
-- JavaScript (basics — in progress)
-- GitHub (publishing projects)
 
+- HTML (semantic markup, accessibility basics)
+- CSS (Flexbox, Grid basics, responsive layout)
+- JavaScript (fundamentals: variables, functions, DOM, events)
+- Git & GitHub (repositories, commits, GitHub Pages)
+ 
 ## Projects
 - Learning Portfolio (HTML, CSS)
 - Profile Card with Image
 - Simple Landing Page
-- JavaScript mini-project (in progress)
+- JavaScript mini-project (DOM, events)
 
 ## Contacts
 - Telegram: https://t.me/sanobar19821979
