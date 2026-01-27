@@ -1,6 +1,6 @@
 # Sanobar — Junior Front-end Developer
 
-Hi! I’m Sanobar, a junior front-end developer focused on building clean and responsive websites using HTML, CSS, and JavaScript.
+Hi! I’m Sanobar, a junior front-end developer focused on building clean and responsive websites with HTML, CSS, and JavaScript.
 
 ## Live Portfolio
 
