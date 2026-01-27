@@ -10,17 +10,27 @@
 <body>
   <h1>To-Do на JavaScript</h1>
 
-  <input
-    type="text"
-    class="input"
-    placeholder="Например: Practice English one minute"
-  >
+  <form id="todoForm">
+    <input
+      id="todoInput"
+      type="text"
+      placeholder="Practice English one minute"
+    >
+    <button type="submit">Добавить</button>
+  </form>
 
-  <button type="button" class="btn">Добавить</button>
+  <div class="filters">
+    <button class="chip" data-filter="all">Все</button>
+    <button class="chip" data-filter="active">Активные</button>
+    <button class="chip" data-filter="done">Готово</button>
+  </div>
 
-  <ul class="list"></ul>
+  <p id="counter">0 задач</p>
 
-  <!-- ВАЖНО: подключаем JS -->
-  <script src="./script.js" defer></script>
+  <ul id="todoList"></ul>
+
+  <button id="clearDone">Очистить готовые</button>
+
+  <script src="./script.js"></script>
 </body>
 </html>
