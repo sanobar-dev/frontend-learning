@@ -2,30 +2,37 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To-Do на JavaScript</title>
   <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
+  <main class="page">
+    <section class="card">
+      <h1 class="title">✅ To-Do на JavaScript</h1>
+      <p class="subtitle">Добавь задачу и нажми кнопку — всё сохранится.</p>
 
-  <div class="app">
-    <h1>✅ To-Do на JavaScript</h1>
-    <p class="subtitle">Добавь задачу и нажми кнопку</p>
+      <form id="todoForm" class="row">
+        <input
+          id="todoInput"
+          class="input"
+          type="text"
+          placeholder="Например: выучить querySelector"
+          autocomplete="off"
+        />
+        <button class="btn" type="submit">Добавить</button>
+      </form>
 
-    <div class="form">
-      <input
-        id="todoInput"
-        type="text"
-        placeholder="Например: выучить JavaScript"
-      />
-      <button id="addBtn">Добавить</button>
-    </div>
+      <div class="meta">
+        <span id="counter">0 задач</span>
+        <button id="clearBtn" class="btn btn--ghost" type="button">Очистить всё</button>
+      </div>
 
-    <p id="counter">0 задач</p>
+      <ul id="todoList" class="list"></ul>
+    </section>
+  </main>
 
-    <ul id="todoList"></ul>
-  </div>
-
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
 </body>
 </html>
- 
