@@ -1,32 +1,23 @@
-const form = document.querySelector("#todoForm");
-const input = document.querySelector("#todoInput");
-const list = document.querySelector("#todoList");
+const input = document.getElementById("todoInput");
+const button = document.getElementById("addBtn");
+const list = document.getElementById("todoList");
+const counter = document.getElementById("counter");
 
-let todos = [];
+let count = 0;
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault(); // ⛔ запрещаем перезагрузку страницы
-
+button.addEventListener("click", () => {
   const text = input.value.trim();
-  if (text === "") return;
 
-  const todo = {
-    id: Date.now(),
-    text: text,
-  };
+  if (text === "") {
+    return;
+  }
 
-  todos.push(todo);
+  const li = document.createElement("li");
+  li.textContent = text;
+  list.appendChild(li);
+
+  count++;
+  counter.textContent = ${count} задач;
+
   input.value = "";
-
-  render();
 });
-
-function render() {
-  list.innerHTML = "";
-
-  todos.forEach(function (todo) {
-    const li = document.createElement("li");
-    li.textContent = todo.text;
-    list.appendChild(li);
-  });
-}
