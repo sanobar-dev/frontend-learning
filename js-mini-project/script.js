@@ -12,6 +12,7 @@ let filter = "all";
 
 render();
 
+// Add task
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -27,94 +28,96 @@ form.addEventListener("submit", (e) => {
 
   todos.unshift(newTodo);
   input.value = "";
-
   saveTodos();
   render();
 });
 
+// Filters
+chips.forEach((chip) => {
+  chip.addEventListener("click", () => {
+    chips.forEach((c) => c.classList.remove("is-active"));
+    chip.classList.add("is-active");
+    filter = chip.dataset.filter;
+    render();
+  });
+});
+
+// Clear done
 clearDoneBtn.addEventListener("click", () => {
   todos = todos.filter((t) => !t.done);
   saveTodos();
   render();
 });
 
-chips.forEach((chip) => {
-  chip.addEventListener("click", () => {
-    chips.forEach((c) => c.classList.remove("active"));
-    chip.classList.add("active");
-
-    filter = chip.dataset.filter;
-    render();
-  });
-});
-
+// Render
 function render() {
+  const visible = getFilteredTodos();
   list.innerHTML = "";
-
-  const visible = getFilteredTodos(todos, filter);
 
   visible.forEach((todo) => {
     const li = document.createElement("li");
-    li.className = "item" + (todo.done ? " done" : "");
+    li.className = "todo" + (todo.done ? " is-done" : "");
+    li.dataset.id = todo.id;
 
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.className = "check";
-    checkbox.checked = todo.done;
+    li.innerHTML = 
+      <div class="todo__left">
+        <input class="todo__check" type="checkbox" ${todo.done ? "checked" : ""} />
+        <span class="todo__text"></span>
+      </div>
+      <button class="todo__remove" type="button" aria-label="Удалить">×</button>
+    ;
 
-    checkbox.addEventListener("change", () => {
-      todo.done = checkbox.checked;
-      saveTodos();
-      render();
+    li.querySelector(".todo__text").textContent = todo.text;
+
+    // Toggle done
+    li.querySelector(".todo__check").addEventListener("change", () => {
+      toggleDone(todo.id);
     });
 
-    const span = document.createElement("span");
-    span.className = "text";
-    span.textContent = todo.text;
-
-    // Двойной клик — редактирование
-    span.addEventListener("dblclick", () => {
-      const updated = prompt("Измени задачу:", todo.text);
-      if (updated === null) return;
-      const clean = updated.trim();
-      if (!clean) return;
-
-      todo.text = clean;
-      saveTodos();
-      render();
+    // Remove
+    li.querySelector(".todo__remove").addEventListener("click", () => {
+      removeTodo(todo.id);
     });
 
-    const delBtn = document.createElement("button");
-    delBtn.className = "icon-btn";
-    delBtn.type = "button";
-    delBtn.title = "Удалить";
-    delBtn.textContent = "🗑️";
-
-    delBtn.addEventListener("click", () => {
-      todos = todos.filter((t) => t.id !== todo.id);
-      saveTodos();
-      render();
-    });
-
-    li.append(checkbox, span, delBtn);
-    list.append(li);
+    list.appendChild(li);
   });
 
   updateCounter();
 }
 
-function updateCounter() {
-  const total = todos.length;
-  const doneCount = todos.filter((t) => t.done).length;
-
-  const word = total === 1 ? "задача" : total >= 2 && total <= 4 ? "задачи" : "задач";
-  counter.textContent = ${total} ${word} • выполнено ${doneCount};
+function getFilteredTodos() {
+  if (filter === "active") return todos.filter((t) => !t.done);
+  if (filter === "done") return todos.filter((t) => t.done);
+  return todos;
 }
 
-function getFilteredTodos(all, mode) {
-  if (mode === "active") return all.filter((t) => !t.done);
-  if (mode === "done") return all.filter((t) => t.done);
-  return all;
+function toggleDone(id) {
+  todos = todos.map((t) => (t.id === id ? { ...t, done: !t.done } : t));
+  saveTodos();
+  render();
+}
+
+function removeTodo(id) {
+  todos = todos.filter((t) => t.id !== id);
+  saveTodos();
+  render();
+}
+
+function updateCounter() {
+  const total = todos.length;
+  const word = getWord(total);
+  counter.textContent = ${total} ${word};
+}
+
+function getWord(n) {
+  // 1 задача, 2-4 задачи, 5-20 задач…
+  const mod10 = n % 10;
+  const mod100 = n % 100;
+
+  if (mod100 >= 11 && mod100 <= 14) return "задач";
+  if (mod10 === 1) return "задача";
+  if (mod10 >= 2 && mod10 <= 4) return "задачи";
+  return "задач";
 }
 
 function saveTodos() {
