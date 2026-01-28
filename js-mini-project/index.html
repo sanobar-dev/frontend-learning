@@ -8,28 +8,30 @@
 </head>
 
 <body>
-  <h1>To-Do на JavaScript</h1>
+  <main class="app">
+    <h1>To-Do на JavaScript</h1>
 
-  <form id="todoForm">
-    <input
-      id="todoInput"
-      type="text"
-      placeholder="Practice English one minute"
-    >
-    <button type="submit">Добавить</button>
-  </form>
+    <form id="todoForm">
+      <input
+        id="todoInput"
+        type="text"
+        placeholder="Practice English one minute"
+      >
+      <button type="submit">Добавить</button>
+    </form>
 
-  <div class="filters">
-    <button class="chip" data-filter="all">Все</button>
-    <button class="chip" data-filter="active">Активные</button>
-    <button class="chip" data-filter="done">Готово</button>
-  </div>
+    <div class="filters">
+      <button class="chip" data-filter="all">Все</button>
+      <button class="chip" data-filter="active">Активные</button>
+      <button class="chip" data-filter="done">Готово</button>
+    </div>
 
-  <p id="counter">0 задач</p>
+    <p id="counter">0 задач</p>
 
-  <ul id="todoList"></ul>
+    <ul id="todoList"></ul>
 
-  <button id="clearDone">Очистить готовые</button>
+    <button id="clearDone">Очистить готовые</button>
+  </main>
 
   <script src="./script.js"></script>
 </body>
