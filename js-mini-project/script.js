@@ -17,9 +17,10 @@ function render() {
     span.textContent = text;
 
     const btn = document.createElement("button");
+    btn.textContent = "🗑️";
     btn.className = "remove";
     btn.type = "button";
-    btn.textContent = "🗑️";
+
     btn.addEventListener("click", () => {
       todos.splice(index, 1);
       render();
@@ -37,9 +38,9 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   const text = input.value.trim();
-  if (!text) return;
+  if (text === "") return;
 
-  todos.unshift(text);
+  todos.push(text);
   input.value = "";
   render();
 });
@@ -50,5 +51,3 @@ clearBtn.addEventListener("click", () => {
 });
 
 render();
-
-
