@@ -8,42 +8,21 @@
 </head>
 
 <body>
-  <main class="app">
-    <header class="app__header">
-      <div class="app__title">
-        <span class="app__icon" aria-hidden="true">✅</span>
-        <h1>To-Do на JavaScript</h1>
-      </div>
-      <p class="app__subtitle">Добавляй задачи, отмечай выполненные — всё сохраняется.</p>
-    </header>
+  <h1>To-Do на JavaScript</h1>
 
-    <section class="card">
-      <form id="todoForm" class="form" autocomplete="off">
-        <input
-          id="todoInput"
-          type="text"
-          placeholder="Например: выучить querySelector"
-          aria-label="Новая задача"
-        />
-        <button type="button" class="btn btn--primary" id="addBtn">Добавить</button>
+  <form id="todoForm">
+    <input
+      id="todoInput"
+      type="text"
+      placeholder="Например: выучить JavaScript"
+    />
 
-      <div class="filters" role="tablist" aria-label="Фильтры задач">
-        <button class="chip is-active" type="button" data-filter="all">Все</button>
-        <button class="chip" type="button" data-filter="active">Активные</button>
-        <button class="chip" type="button" data-filter="done">Готово</button>
+    <button type="submit">Добавить</button>
+  </form>
 
-        <button id="clearDone" class="btn btn--ghost" type="button">
-          Очистить готовые
-        </button>
-      </div>
+  <ul id="todoList"></ul>
 
-      <p id="counter" class="counter">0 задач</p>
-
-      <ul id="todoList" class="list"></ul>
-    </section>
-  </main>
-
-  <script src="./script.js?v=1" defer></script>
+  <script src="./script.js"></script>
 </body>
 </html>
      
