@@ -2,15 +2,31 @@ const form = document.querySelector("#todoForm");
 const input = document.querySelector("#todoInput");
 const list = document.querySelector("#todoList");
 const counter = document.querySelector("#counter");
+const clearBtn = document.querySelector("#clearBtn");
 
 let todos = [];
 
 function render() {
   list.innerHTML = "";
 
-  todos.forEach((todo) => {
+  todos.forEach((text, index) => {
     const li = document.createElement("li");
-    li.textContent = todo;
+    li.className = "item";
+
+    const span = document.createElement("span");
+    span.textContent = text;
+
+    const btn = document.createElement("button");
+    btn.className = "remove";
+    btn.type = "button";
+    btn.textContent = "🗑️";
+    btn.addEventListener("click", () => {
+      todos.splice(index, 1);
+      render();
+    });
+
+    li.appendChild(span);
+    li.appendChild(btn);
     list.appendChild(li);
   });
 
@@ -25,8 +41,14 @@ form.addEventListener("submit", (e) => {
 
   todos.unshift(text);
   input.value = "";
+  render();
+});
 
+clearBtn.addEventListener("click", () => {
+  todos = [];
   render();
 });
 
 render();
+
+
