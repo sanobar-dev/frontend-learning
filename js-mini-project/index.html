@@ -1,38 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>To-Do на JavaScript</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css?v=1" />
 </head>
 
 <body>
   <main class="app">
-    <h1>To-Do на JavaScript</h1>
+    <header class="app__header">
+      <div class="app__title">
+        <span class="app__icon" aria-hidden="true">✅</span>
+        <h1>To-Do на JavaScript</h1>
+      </div>
+      <p class="app__subtitle">Добавляй задачи, отмечай выполненные — всё сохраняется.</p>
+    </header>
 
-    <form id="todoForm">
-      <input
-        id="todoInput"
-        type="text"
-        placeholder="Practice English one minute"
-      >
-      <button type="submit">Добавить</button>
-    </form>
+    <section class="card">
+      <form id="todoForm" class="form" autocomplete="off">
+        <input
+          id="todoInput"
+          type="text"
+          placeholder="Например: выучить querySelector"
+          aria-label="Новая задача"
+        />
+        <button type="submit" class="btn btn--primary">Добавить</button>
+      </form>
 
-    <div class="filters">
-      <button class="chip" data-filter="all">Все</button>
-      <button class="chip" data-filter="active">Активные</button>
-      <button class="chip" data-filter="done">Готово</button>
-    </div>
+      <div class="filters" role="tablist" aria-label="Фильтры задач">
+        <button class="chip is-active" type="button" data-filter="all">Все</button>
+        <button class="chip" type="button" data-filter="active">Активные</button>
+        <button class="chip" type="button" data-filter="done">Готово</button>
 
-    <p id="counter">0 задач</p>
+        <button id="clearDone" class="btn btn--ghost" type="button">
+          Очистить готовые
+        </button>
+      </div>
 
-    <ul id="todoList"></ul>
+      <p id="counter" class="counter">0 задач</p>
 
-    <button id="clearDone">Очистить готовые</button>
+      <ul id="todoList" class="list"></ul>
+    </section>
   </main>
 
-  <script src="./script.js"></script>
+  <script src="./script.js?v=1" defer></script>
 </body>
 </html>
+     
